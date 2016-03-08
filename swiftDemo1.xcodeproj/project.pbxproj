@@ -30,6 +30,7 @@
 		B2DDF4291C8D76CC00791E8B /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF4281C8D76CC00791E8B /* NetworkResponse.swift */; };
 		B2DDF42D1C8D824500791E8B /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF42C1C8D824500791E8B /* Tool.swift */; };
 		B2DDF42F1C8EB71800791E8B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF42E1C8EB71800791E8B /* HomeCell.swift */; };
+		B2DDF4311C8EDB1200791E8B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF4301C8EDB1200791E8B /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B2DDF4281C8D76CC00791E8B /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		B2DDF42C1C8D824500791E8B /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		B2DDF42E1C8EB71800791E8B /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		B2DDF4301C8EDB1200791E8B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				B2DDF42E1C8EB71800791E8B /* HomeCell.swift */,
 				B2DDF4031C8D6AFF00791E8B /* SimpleViewController.swift */,
 				B2DDF4051C8D6D1200791E8B /* FirstViewController.swift */,
+				B2DDF4301C8EDB1200791E8B /* WebViewController.swift */,
 				B2DDF3F21C8D5FC500791E8B /* Assets.xcassets */,
 				B2DDF4251C8D727A00791E8B /* Resource */,
 				B2DDF3F71C8D5FC500791E8B /* Info.plist */,
@@ -288,6 +291,7 @@
 				B2DDF4241C8D6F0D00791E8B /* GlobalDefine.swift in Sources */,
 				B2DDF4171C8D6E9E00791E8B /* DHButton.swift in Sources */,
 				B2DDF4061C8D6D1200791E8B /* FirstViewController.swift in Sources */,
+				B2DDF4311C8EDB1200791E8B /* WebViewController.swift in Sources */,
 				B2DDF41C1C8D6E9E00791E8B /* String+Extension.swift in Sources */,
 				B2DDF4291C8D76CC00791E8B /* NetworkResponse.swift in Sources */,
 				B2DDF41A1C8D6E9E00791E8B /* NetworkTool.swift in Sources */,

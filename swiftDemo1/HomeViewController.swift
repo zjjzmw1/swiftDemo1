@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: BaseViewController,UITableViewDataSource,UITableViewDelegate {
     
     // 表格数据
-    let arr = ["简单变量操作","控件大全"]
+    let arr = ["简单变量操作","控件大全","webView"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,8 @@ class HomeViewController: BaseViewController,UITableViewDataSource,UITableViewDe
             detailVC = SimpleViewController()
         }else if indexPath.row == 1 {// 控件大全
             detailVC = FirstViewController()
+        }else if indexPath.row == 2 {// webView
+            detailVC = WebViewController()
         }
         self.navigationController!.pushViewController(detailVC!, animated: true)
     }
