@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: BaseViewController,UITableViewDataSource,UITableViewDelegate {
     
     // 表格数据
-    let arr = ["简单变量操作","控件大全","webView","请求"]
+    let arr = ["简单变量操作","控件大全","webView","请求","Polyline"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class HomeViewController: BaseViewController,UITableViewDataSource,UITableViewDe
         
         // Class 注册
         tableView.registerClass(HomeCell.self, forCellReuseIdentifier: "HomeCellID")
+    
+        
+        
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -79,8 +83,19 @@ class HomeViewController: BaseViewController,UITableViewDataSource,UITableViewDe
             detailVC = WebViewController()
         }else if indexPath.row == 3 {// 请求
             detailVC = NetWorkViewController()
+        }else if indexPath.row == 4 {// polyline 测试
+            // 测试谷歌的polyLine
+            let encodedPolyline = "_p~iF~ps|U_ulLnnqC_mqNvxq`@"
+            
+            let coordinates : [CLLocationCoordinate2D]? = Polyline.decodePolyline(encodedPolyline)
+            
+            for  coor:CLLocationCoordinate2D in coordinates! {
+                print("lon= \(coor.longitude) lat===\(coor.latitude) ")
+            }
         }
-        self.navigationController!.pushViewController(detailVC!, animated: true)
+        if detailVC != nil {
+            self.navigationController!.pushViewController(detailVC!, animated: true)
+        }
     }
 
     
