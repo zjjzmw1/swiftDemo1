@@ -31,12 +31,14 @@
 		B2DDF42D1C8D824500791E8B /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF42C1C8D824500791E8B /* Tool.swift */; };
 		B2DDF42F1C8EB71800791E8B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF42E1C8EB71800791E8B /* HomeCell.swift */; };
 		B2DDF4311C8EDB1200791E8B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF4301C8EDB1200791E8B /* WebViewController.swift */; };
+		B2DDF4371C8EE02D00791E8B /* NetWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDF4361C8EE02D00791E8B /* NetWorkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FF6234220AC75A3C1A327A5 /* Pods-swiftDemo1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDemo1.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDemo1/Pods-swiftDemo1.release.xcconfig"; sourceTree = "<group>"; };
 		75BC63444A5B00D5CF4F4546 /* Pods_swiftDemo1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftDemo1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36F2ECB026BCE06329B4FAE /* Pods-swiftDemo1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDemo1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDemo1/Pods-swiftDemo1.debug.xcconfig"; sourceTree = "<group>"; };
+		B23663981CAB6BFC006C76FA /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		B2DDF3E81C8D5FC500791E8B /* swiftDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DDF3EB1C8D5FC500791E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2DDF3F21C8D5FC500791E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		B2DDF42C1C8D824500791E8B /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		B2DDF42E1C8EB71800791E8B /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		B2DDF4301C8EDB1200791E8B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B2DDF4361C8EE02D00791E8B /* NetWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				B2DDF4031C8D6AFF00791E8B /* SimpleViewController.swift */,
 				B2DDF4051C8D6D1200791E8B /* FirstViewController.swift */,
 				B2DDF4301C8EDB1200791E8B /* WebViewController.swift */,
+				B2DDF4361C8EE02D00791E8B /* NetWorkViewController.swift */,
+				B23663981CAB6BFC006C76FA /* MyPlayground.playground */,
 				B2DDF3F21C8D5FC500791E8B /* Assets.xcassets */,
 				B2DDF4251C8D727A00791E8B /* Resource */,
 				B2DDF3F71C8D5FC500791E8B /* Info.plist */,
@@ -308,6 +313,7 @@
 				B2DDF4041C8D6AFF00791E8B /* SimpleViewController.swift in Sources */,
 				B2DDF4021C8D61B400791E8B /* HomeViewController.swift in Sources */,
 				B2DDF4201C8D6E9E00791E8B /* UINib+Extension.swift in Sources */,
+				B2DDF4371C8EE02D00791E8B /* NetWorkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

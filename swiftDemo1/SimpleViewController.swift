@@ -23,6 +23,8 @@ class SimpleViewController: BaseViewController {
         if isMan {
             isManString = "男"
         }
+        var sexString:String = isMan ? "男":"女"
+//        sexString ?? "不知道"// 如果为空就为后面的值
         age += 1
         print(name + String(age) + String(height) + des + String(isMan))
         // 数组
@@ -36,13 +38,27 @@ class SimpleViewController: BaseViewController {
         aLabel.backgroundColor = UIColor.clearColor()
         aLabel.font = UIFont.systemFontOfSize(20)
         aLabel.textColor = UIColor.blackColor()
-        aLabel.text = "姓名：" + name + "年龄：" + String(age) + "身高：" + String(height) + "\n职位：" + des + "性别：" + isManString + "\n喜欢吃的水果：" + arr[0] + "," + arr[1]
+        aLabel.text = "姓名：" + name + "年龄：" + String(age) + "身高：" + String(height) + "\n职位：" + des + "性别：" + isManString + sexString + "\n喜欢吃的水果：" + arr[0] + "," + arr[1]
         
         aLabel.numberOfLines = 0    // 需要换行的时候需要，高度设置为0
         aLabel.sizeToFit()
         self.view .addSubview(aLabel)
     
+        
     
     }
 
+    func studay(){
+        let str = "hello,swift"
+        str.lowercaseString
+        let str1 : String = NSString(format: "%@", "好的") as String
+        str1.lowercaseString
+        
+    }
+    
+    
+    
+    
+    
+    
 }
