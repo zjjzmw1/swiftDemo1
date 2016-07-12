@@ -7,3 +7,9 @@ var str = "Hello, playground"
 let str2 = "  --- He-llo   " as NSString
 // 去除两端的空格和-
 str2.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: " -"))
+
+var a = 5
+a
+
+
+

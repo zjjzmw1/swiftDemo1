@@ -69,6 +69,7 @@
 		B2DDF4361C8EE02D00791E8B /* NetWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkViewController.swift; sourceTree = "<group>"; };
 		FF6C72D11CB7924100FDF189 /* Polyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
 		FF6C72D21CB7924100FDF189 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FF91B59F1D34EFE600999AEC /* TypeTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TypeTest.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 				B2DDF4361C8EE02D00791E8B /* NetWorkViewController.swift */,
 				FF6C72D11CB7924100FDF189 /* Polyline.swift */,
 				FF6C72D21CB7924100FDF189 /* README.md */,
+				FF91B59F1D34EFE600999AEC /* TypeTest.playground */,
 				B23663981CAB6BFC006C76FA /* MyPlayground.playground */,
 				B2DDF3F21C8D5FC500791E8B /* Assets.xcassets */,
 				B2DDF4251C8D727A00791E8B /* Resource */,
