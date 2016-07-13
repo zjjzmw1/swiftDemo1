@@ -28,7 +28,7 @@ switch d1 {
     case .East :
         print("east")
     default :
-        print("不对")
+        print("其他")
 }
 
 if d1.hashValue == Dirction.East.hashValue {
@@ -44,32 +44,6 @@ if d3 == d4 {
 }else{
     print("d3==\(d3)  d4===\(d4)")
 }
-
-// 不常用的
-var p1 = People.age(age : 10)
-var p2 : People = .name(name : "xiaoming")
-
-switch p1 {
-    case People.age(10) :
-        print("10 岁了")
-    case .name("xiaomi") :
-        print("小米")
-    default :
-        print("不匹配")
-}
-
-if let p : People = p1 {
-    print("p===\(p)")
-}
-
-switch p2 {
-    case let People.age(age) :
-        print("年龄===\(age)")
-    case People.name(let name) :
-        print("名字===\(name)")
-}
-
-
 
 
 // 枚举使用 ---------------------------END---------------------------
