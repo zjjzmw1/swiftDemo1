@@ -8,44 +8,15 @@
  
  2：引用类型 --------- :
     类(Class)
- 
+    类 与结构体等不同的地方：
+        1.继承允许一个类继承另一个类的特征
+        2.类型转换允许在运行时检查和解释一个类实例的类型
+        3.取消初始化器允许一个类实例释放任何其所被分配的资源(与结构体不同，类实例没有默认的成员逐一初始化器)
+        4.引用计数允许对一个类的多次引用（因为是引用类型）
 
  */
 
 
 
 import UIKit
-
-
-// 枚举使用 ---------------------------BEGIN---------------------------
-var d1 = Dirction.North
-var d2 = d1
-d1 = .East
-d2
-switch d1 {
-    case .North :
-        print("north")
-    case .East :
-        print("east")
-    default :
-        print("其他")
-}
-
-if d1.hashValue == Dirction.East.hashValue {
-    print("方向相等值为： " + String(d1.hashValue))
-}else{
-    print("方向不相等值为：" + String(d1.hashValue))
-}
-
-var d3 = Dirction3.East
-var d4 = Dirction3.West
-if d3 == d4 {
-    print("相等：" + String(d3))
-}else{
-    print("d3==\(d3)  d4===\(d4)")
-}
-
-
-// 枚举使用 ---------------------------END---------------------------
-
 
