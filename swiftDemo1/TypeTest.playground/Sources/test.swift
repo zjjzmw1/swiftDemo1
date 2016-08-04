@@ -21,6 +21,22 @@ public func test() -> Void {
     // ??
     var a:Int?
     print(a ?? 2) //2
-
     
 }
+
+/// 普通交互方法定义
+func swapTwoIntValue (inout a:Int ,inout b:Int) {
+    let tempV = a
+    a = b
+    b = tempV
+}
+
+/// 泛型定义
+func swapTwoValue<T> (inout a:T , inout b:T) {
+    let tempValue = a
+    a = b
+    b = tempValue
+}
+
+
+
