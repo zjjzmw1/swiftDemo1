@@ -14,7 +14,7 @@ public class People {
 
 
 // 测试类方法
-func testClass() {
+public func testClass() {
     var p1 = People(height: 15)
     var p2 = p1
     if p1 === p2 {// 判断两个类是否引用一个
@@ -22,4 +22,6 @@ func testClass() {
     }else if (p1 !== p2) {
         print("两个类不是引用的一个")
     }
+    
+    
 }

@@ -20,3 +20,7 @@
 
 import UIKit
 
+test()
+
+
+
