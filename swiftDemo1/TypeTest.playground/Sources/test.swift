@@ -22,6 +22,49 @@ public func test() -> Void {
     var a:Int?
     print(a ?? 2) //2
     
+    
+    // 闭包test
+    var doubleFun : (Int) -> Int
+    doubleFun = {
+        num in
+        return num * 2
+    }
+    
+    doubleFun(5)
+    
+    
+    typealias Type = (Int) -> Int
+    
+    var b : Type
+    b = {
+        num in
+        return num * 2
+    }
+    
+    b(6)
+    
+    
+    // 运算符重载
+//    func - (t1 : Int,t2: Int) -> Int {
+//        return  t1 + t2
+//    }
+//    
+//    var a = 20
+//    var b = 23
+//    
+//    var c = b - a
+//    c
+//    
+//    let tupe1 = ("xiaoming",16)
+//    let tupe2 = ("xiaoming",18)
+//    
+//    func == (t1:(String,Int) , t2:(String,Int)) -> Bool {
+//        return (t1.0 == t2.0 && t1.1 == t2.1)
+//    }
+//    
+//    let flag = (tupe1 == tupe2)
+//    flag
+
 }
 
 /// 普通交互方法定义

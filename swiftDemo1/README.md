@@ -1,107 +1,51 @@
-# Polyline
+# swift 从入门到精通
 
-Get array of coordinates from google encoded Polyline algorithm format
+## 看了这篇文章能学到什么？
+了解swift是干什么的，swift的设计目标，优缺点
+了解swift设计风格和语法结构；
+了解几个好点的学习swift的网站~
 
-## Installation
+## swift简介：
+swift是iOS和OS X应用的编程语言，和C、OC、C++都可以兼容。
+开源的，基于Unix。
+安全的。
+支持playgrounds
 
-- Import Polyline.swift to your project
-- Import MapKit to build
+详情介绍：http://baike.baidu.com/link?url=a0-7X1EgeaCJfqMnjuTesu42mqxq8HbLxjaldqJhGyHD2DFXmVODWi_mO5QEAMjsO5yZPnSi2OCSORAya4eM6KA7CPxl7DqIk_3KiuCApGS
 
-### Requirements
+## 基本语法讲解（挑选几个例子、结合Demo代码）：https://github.com/zjjzmw1/swiftDemo1
+playgrounds
+println
+let
+var
+值类型（元组、结构体、枚举、基本类型：整数(Int)、浮点数(Float)、布尔值(Bool)、字符串(String)、数组(Array)和字典(Dictionary)）
+引用类型（类）
+if let
+?
+!
+??
+泛型
+typealias
+操作符重载(后面++、--中有介绍)
+## swift3.0新特性和学习链接分享
 
-- Xcode 6.4
-- iOS 8.0+
+### swift3.0变化的几个具体变化例子：
+var定义的参数将被取消：http://swiftcafe.io/2016/05/05/swift3-var/
+调试标识更改：http://swiftcafe.io/2016/05/10/swift3-identifier/
+命名风格从oc转换为swift：http://swiftcafe.io/2016/05/07/swift3-objc/
+++、--废弃：http://www.swiftcafe.io/2016/04/07/swift2-2/
+### swiftCafe原创内容交流社区： http://www.swiftcafe.io
 
-## Usage
+### swift3.0对我们的影响： http://www.swiftcafe.io/2016/05/01/swift3/
 
-```Swift
-for encodedPolyline in route?.polylines {
+### swift更新变动文档地址： https://github.com/apple/swift-evolution
 
-    let coordinates = Polyline.decodePolyline(encodedPolyline)
+### swift官方3.0文档: https://swift.org/blog/swift-3-0-preview-1-released/
 
-    mapView!.addPolyline(coordinates!)
+### swift闭包趣谈（*）：http://www.swiftcafe.io/2016/07/19/funny-closure/
+### swift可能真的要支持安卓了：http://www.swiftcafe.io/2016/04/14/swift-android/
 
-}
-```
-Once you have array of coordinates, you can draw polyline overlay using the following function
 
-```Swift
-func addPolyline(coordinates: [CLLocationCoordinate2D]) {
 
-    var coordinateArray = coordinates
 
-    let polyline = MKPolyline(coordinates: &coordinateArray, count: coordinateArray.count)
 
-    addOverlay(polyline)
-
-}
-```
-
-## Encoded Polyline Algorithm Format
-
-Polyline encoding is a lossy compression algorithm that allows you to store a series of coordinates as a single string. Point coordinates are encoded using signed values. If you only have a few static points, you may also wish to use the interactive [polyline encoding utility](https://developers.google.com/maps/documentation/utilities/polylineutility).
-
-The encoding process converts a binary value into a series of character codes for ASCII characters using the familiar base64 encoding scheme: to ensure proper display of these characters, encoded values are summed with 63 (the ASCII character '?') before converting them into ASCII. The algorithm also checks for additional character codes for a given point by checking the least significant bit of each byte group; if this bit is set to 1, the point is not yet fully formed and additional data must follow.
-
-Additionally, to conserve space, **points only include the offset from the previous point** (except of course for the first point). All points are encoded in Base64 as signed integers, as latitudes and longitudes are signed values. The encoding format within a polyline needs to represent two coordinates representing latitude and longitude to a reasonable precision. Given a maximum longitude of +/- 180 degrees to a precision of 5 decimal places (180.00000 to -180.00000), this results in the need for a 32 bit signed binary integer value.
-
-Note that the backslash is interpreted as an escape character within string literals. Any output of this utility should convert backslash characters to double-backslashes within string literals.
-
-### The steps for encoding such a signed value are specified below.
-
-- [x] Take the initial signed value: 
-```
--179.9832104
-```
-- [x] Take the decimal value and multiply it by 1e5, rounding the result:
-```
--17998321
-```
-- [x] Convert the decimal value to binary. Note that a negative value must be calculated using its [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) by inverting the binary value and adding one to the result:
-```
-00000001 00010010 10100001 11110001
-11111110 11101101 01011110 00001110
-11111110 11101101 01011110 00001111
-```
-- [x] Left-shift the binary value one bit:
-```
-11111101 11011010 10111100 00011110
-```
-- [x] If the original decimal value is negative, invert this encoding:
-```
-00000010 00100101 01000011 11100001
-```
-- [x] Break the binary value out into 5-bit chunks (starting from the right hand side):
-```
-00001 00010 01010 10000 11111 00001
-```
-- [x] Place the 5-bit chunks into reverse order:
-```
-00001 11111 10000 01010 00010 00001
-```
-- [x] OR each value with 0x20 if another bit chunk follows:
-```
-100001 111111 110000 101010 100010 000001
-```
-- [x] Convert each value to decimal:
-```
-33 63 48 42 34 1
-```
-- [x] Add 63 to each value:
-```
-96 126 111 105 97 64
-```
-- [x] Convert each value to its ASCII equivalent:
-```
-`~oia@
-```
-
-## More Details
-
-- [Encoded Polyline Algorithm Format](https://developers.google.com/maps/documentation/utilities/polylinealgorithm?hl=en)
-
-## Contact
-
-Mohamed Salem
-- [www.linkedin.com/machometus](https://eg.linkedin.com/in/machometus)
-- [cpe.salem@gmail.com](mailto:cpe.salem@gmail.com)
